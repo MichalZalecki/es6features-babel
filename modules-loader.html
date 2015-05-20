@@ -13,7 +13,7 @@
         <script src="node_modules/es6-module-loader/dist/es6-module-loader.js"></script>
         <script type="text/babel">
             System.transpiler = 'babel';
-            System.import('src/es6/modules/math').then(math => {
+            System.import('src/modules/math').then(math => {
                 document.getElementById('result').innerHTML += math.sum(math.pi, math.pi);
             });
         </script>

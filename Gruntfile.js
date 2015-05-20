@@ -14,30 +14,30 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'src/es5/arrow-functions.js': 'src/es6/arrow-functions.js',
-                    'src/es5/classes.js': 'src/es6/classes.js',
-                    'src/es5/data-structures.js': 'src/es6/data-structures.js',
-                    'src/es5/default-parameters.js': 'src/es6/default-parameters.js',
-                    'src/es5/enhanced-object-literals.js': 'src/es6/enhanced-object-literals.js',
-                    'src/es5/generators.js': 'src/es6/generators.js',
-                    'src/es5/iterators-for-of.js': 'src/es6/iterators-for-of.js',
-                    'src/es5/let-and-const.js': 'src/es6/let-and-const.js',
-                    'src/es5/modules/math.js': 'src/es6/modules/math.js',
-                    'src/es5/modules/person.js': 'src/es6/modules/person.js',
-                    'src/es5/modules.js': 'src/es6/modules.js',
-                    'src/es5/numeric-literals.js': 'src/es6/numeric-literals.js',
-                    'src/es5/promises.js': 'src/es6/promises.js',
-                    'src/es5/rest-parameters.js': 'src/es6/rest-parameters.js',
-                    'src/es5/spread.js': 'src/es6/spread.js',
-                    'src/es5/symbols.js': 'src/es6/symbols.js',
-                    'src/es5/template-literals.js': 'src/es6/template-literals.js'
+                    'dist/arrow-functions.js': 'src/arrow-functions.js',
+                    'dist/classes.js': 'src/classes.js',
+                    'dist/data-structures.js': 'src/data-structures.js',
+                    'dist/default-parameters.js': 'src/default-parameters.js',
+                    'dist/enhanced-object-literals.js': 'src/enhanced-object-literals.js',
+                    'dist/generators.js': 'src/generators.js',
+                    'dist/iterators-for-of.js': 'src/iterators-for-of.js',
+                    'dist/let-and-const.js': 'src/let-and-const.js',
+                    'dist/modules/math.js': 'src/modules/math.js',
+                    'dist/modules/person.js': 'src/modules/person.js',
+                    'dist/modules.js': 'src/modules.js',
+                    'dist/numeric-literals.js': 'src/numeric-literals.js',
+                    'dist/promises.js': 'src/promises.js',
+                    'dist/rest-parameters.js': 'src/rest-parameters.js',
+                    'dist/spread.js': 'src/spread.js',
+                    'dist/symbols.js': 'src/symbols.js',
+                    'dist/template-literals.js': 'src/template-literals.js'
                 }
             }
         },
         browserify: {
             dist: {
-                src: ['src/es5/*.js', '!src/es5/bundle.js'],
-                dest: 'src/es5/bundle.js',
+                src: ['dist/*.js', '!dist/bundle.js'],
+                dest: 'dist/bundle.js',
                 options: {
                     transform: [
                         // 'deamdify' // needed when working with AMD modules
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
             options: {
               files: [
                 'node_modules/grunt-babel/node_modules/babel-core/browser-polyfill.js',
-                'src/es5/bundle.js'
+                'dist/bundle.js'
               ]
             }
           }
