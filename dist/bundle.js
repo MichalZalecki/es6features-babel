@@ -57,7 +57,7 @@ describe("Arrow Functions", function () {
         expect(objectify("awesome")).toEqual({ value: "awesome" });
         expect(function () {
             return person.getProperties();
-        }).toThrow(new TypeError("Cannot read property 'name' of undefined"));
+        }).toThrowError(TypeError, /undefined/);
         expect(person.getProperties2()).toEqual(["Bob has Car", "Bob has PC"]);
     });
 });

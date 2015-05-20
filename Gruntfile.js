@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         clean: {
-            path: ['src/es5']
+            path: ['dist']
         },
         babel: {
             options: {
@@ -47,13 +47,7 @@ module.exports = function (grunt) {
         },
         karma: {
           unit: {
-            configFile: 'karma.conf.js',
-            options: {
-              files: [
-                'node_modules/grunt-babel/node_modules/babel-core/browser-polyfill.js',
-                'dist/bundle.js'
-              ]
-            }
+            configFile: 'karma.conf.js'
           }
         },
     });

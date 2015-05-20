@@ -45,7 +45,7 @@ describe("Arrow Functions", () => {
         expect(triangleHeron(3, 4, 5)).toEqual(6);
         expect(objectify("awesome")).toEqual({value:"awesome"});
         expect(() => person.getProperties())
-            .toThrow(new TypeError("Cannot read property 'name' of undefined"));
+            .toThrowError(TypeError, /undefined/);
         expect(person.getProperties2()).toEqual(["Bob has Car", "Bob has PC"]);
     });
 
