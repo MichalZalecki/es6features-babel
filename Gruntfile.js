@@ -27,6 +27,7 @@ module.exports = function (grunt) {
                     'dist/modules.js': 'src/modules.js',
                     'dist/numeric-literals.js': 'src/numeric-literals.js',
                     'dist/promises.js': 'src/promises.js',
+                    'dist/proxies.js': 'src/proxies.js',
                     'dist/rest-parameters.js': 'src/rest-parameters.js',
                     'dist/spread.js': 'src/spread.js',
                     'dist/symbols.js': 'src/symbols.js',
