@@ -7,7 +7,10 @@ module.exports = function (grunt) {
         },
         babel: {
             options: {
-                sourceMap: false
+                sourceMap: false,
+                // modules: "common", // by default use CommonJS modules
+                // modules: "umd", // use UMD modules
+                // modules: "amd", // use AMD modules
             },
             dist: {
                 files: {
@@ -34,7 +37,12 @@ module.exports = function (grunt) {
         browserify: {
             dist: {
                 src: ['src/es5/*.js', '!src/es5/bundle.js'],
-                dest: 'src/es5/bundle.js'
+                dest: 'src/es5/bundle.js',
+                options: {
+                    transform: [
+                        // 'deamdify' // needed when working with AMD modules
+                    ]
+                }
             }
         },
         karma: {
