@@ -15,8 +15,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'node_modules/grunt-babel/node_modules/babel-core/browser-polyfill.js',
-        'src/es5/bundle.js'
     ],
 
 

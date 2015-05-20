@@ -9,8 +9,8 @@ module.exports = function (grunt) {
             options: {
                 sourceMap: false,
                 // modules: "common", // by default use CommonJS modules
-                // modules: "umd", // use UMD modules
-                // modules: "amd", // use AMD modules
+                // modules: "umd",    // use UMD modules
+                // modules: "amd",    // use AMD modules
             },
             dist: {
                 files: {
@@ -47,7 +47,13 @@ module.exports = function (grunt) {
         },
         karma: {
           unit: {
-            configFile: 'karma.conf.js'
+            configFile: 'karma.conf.js',
+            options: {
+              files: [
+                'node_modules/grunt-babel/node_modules/babel-core/browser-polyfill.js',
+                'src/es5/bundle.js'
+              ]
+            }
           }
         },
     });
