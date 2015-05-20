@@ -46,11 +46,23 @@ module.exports = function (grunt) {
             }
         },
         karma: {
-          unit: {
-            configFile: 'karma.conf.js'
-          }
+            options: {
+                configFile: 'karma.conf.js'
+            },
+            continuous: {
+                background: true,
+                singleRun: false
+            },
+            single: {}
         },
+        watch: {
+            scripts: {
+                files: 'src/**/*.js',
+                tasks: ['babel', 'browserify', 'karma:continuous:run']
+            }
+        }
     });
 
-    grunt.registerTask('default', ['babel', 'browserify', 'karma']);
+    grunt.registerTask('default', ['babel', 'browserify', 'karma:single']);
+    grunt.registerTask('continuous', ['karma:continuous:start', 'watch']);
 }

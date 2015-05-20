@@ -7,6 +7,24 @@ above the code.
 
 Looking for minimal version? Check out this [gist](https://gist.github.com/MichalZalecki/e740c05ddf9e626c6394)!
 
-## How to start
+## Getting Started
 
-Install npm dependencies abd run ``grunt`` to compile ES6 to ES5 and run tests.
+Install dependencies
+
+```
+npm install
+```
+
+## Tasks
+
+Single run (transpile -> bundle -> unit tests)
+
+```
+grunt
+```
+
+Continuous (karma server -> watch the files)
+
+```
+grunt continuous
+```
