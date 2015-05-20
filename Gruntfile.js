@@ -7,7 +7,6 @@ module.exports = function (grunt) {
         },
         babel: {
             options: {
-                sourceMap: false,
                 // modules: "common", // by default use CommonJS modules
                 // modules: "umd",    // use UMD modules
                 // modules: "amd",    // use AMD modules
