@@ -1,3 +1,5 @@
+require("babel/polyfill");
+
 describe("Generators", () => {
 
     it("should make functions yielding", () => {
