@@ -20,7 +20,9 @@ describe("Enhanced Object Literals", function () {
                 by: function by() {
                     return "By!";
                 }
-            } }, _defineProperty(_obj, x * 2, "Computed Property Name"), _defineProperty(_obj, "greet", greet
+            } }, _defineProperty(_obj, x * 2, "Computed Property Name"), _defineProperty(_obj, "greet", greet), _defineProperty(_obj, "cheers", function cheers(name) {
+            return "Cheers " + name;
+        }
         // @TODO making super calls
         ), _obj);
 
@@ -28,6 +30,7 @@ describe("Enhanced Object Literals", function () {
         expect(obj.hi()).toEqual("Hi!");
         expect(obj.by()).toEqual("By!");
         expect(obj.greet("Bob")).toEqual("Hello Bob");
+        expect(obj.cheers("Bob")).toEqual("Cheers Bob");
     });
 });
 

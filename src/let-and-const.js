@@ -11,7 +11,7 @@ describe("Block Scoped Binding", () => {
             for (var i of [4, 5, 6]) {
                 funcs.push(function() { return i; });
             }
-            expect([funcs[0](), funcs[1](), funcs[2]()]).toEqual([6, 6, 6])
+            expect([funcs[0](), funcs[1](), funcs[2]()]).toEqual([6, 6, 6]);
         })();
 
         (function() {
@@ -19,7 +19,7 @@ describe("Block Scoped Binding", () => {
             for (let i of [4, 5, 6]) {
                 funcs.push(function() { return i; });
             }
-            expect([funcs[0](), funcs[1](), funcs[2]()]).toEqual([4, 5, 6])
+            expect([funcs[0](), funcs[1](), funcs[2]()]).toEqual([4, 5, 6]);
         })();
 
         expect(() => {

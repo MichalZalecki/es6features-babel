@@ -14,7 +14,10 @@ describe("Enhanced Object Literals", () => {
                 by: function () { return "By!" }
             },
             // object initializer shorthand (greet: greet)
-            greet
+            greet,
+            cheers(name) {
+                return "Cheers " + name;
+            }
             // @TODO making super calls
         };
 
@@ -22,6 +25,7 @@ describe("Enhanced Object Literals", () => {
         expect(obj.hi()).toEqual("Hi!");
         expect(obj.by()).toEqual("By!");
         expect(obj.greet("Bob")).toEqual("Hello Bob");
+        expect(obj.cheers("Bob")).toEqual("Cheers Bob");
     });
 
 });

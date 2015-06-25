@@ -1,3 +1,5 @@
+// @TODO Mention in the article
+
 describe("Proxy", () => {
 
   if (typeof Proxy != "function") {

@@ -1,4 +1,4 @@
 export let sum = (x, y) => {
     return x + y;
 };
-export let pi = 3.141593;
+export const pi = 3.141593;

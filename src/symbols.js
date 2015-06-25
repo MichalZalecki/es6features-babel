@@ -14,6 +14,10 @@ describe("Symbols", () => {
 
         expect(Symbol("bar")).not.toBe(Symbol("bar"));
         expect(Symbol.for("bar")).toBe(Symbol.for("bar"));
+
+        expect(function () {
+            new Symbol("foobar");
+        }).toThrow(new TypeError("Symbol is not a constructor"));
     });
 
     it("should enable access control for object state", () => {
