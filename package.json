@@ -5,6 +5,7 @@
   "author": "Michal Zalecki <michal@michalzalecki.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel": "^5.6.7",
     "deamdify": "^0.1.1",
     "es6-module-loader": "^0.16.6",
     "grunt-babel": "^5.0.0",
